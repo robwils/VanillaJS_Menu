@@ -18,10 +18,15 @@ a:hover {
 }
 
 HTML,
-body {
+body,
+h1,
+h2 {
   margin: 0px;
   padding: 0px;
   border: 0px;
+}
+
+body {
   background-color: var(--white);
 }
 
@@ -44,11 +49,12 @@ body {
 #navIcon {
   cursor: pointer;
   float: left;
-  padding: 10px 20px;
+  padding: 15px 10px;
 }
 
 ul {
   margin: 0;
+  padding: 0;
 }
 
 .menuContainer {
@@ -59,7 +65,7 @@ ul {
   display: block;
   color: black;
   transition: 200ms;
-  width: 150px;
+  width: 200px;
   position: absolute;
   top: 50px;
   background-color: #92b4ec;
@@ -68,6 +74,11 @@ ul {
 
 .menuLink {
   list-style-type: none;
+  padding: 10px;
+}
+
+.menuLink:hover {
+  font-size: large;
 }
 
 .container {
