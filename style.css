@@ -25,26 +25,26 @@ body {
   background-color: var(--white);
 }
 
-h1,
-h2 {
-  margin: inherit;
-}
-
 /* nav bar */
 #myNav {
   background-color: var(--blue);
   width: 100vw;
   position: fixed;
+  height: 50px;
+  display: block;
 }
 
 #navHeader {
   text-align: right;
-  display: inline;
+  float: right;
+  padding: 10px;
+  margin: 0;
 }
 
 #navIcon {
   cursor: pointer;
-  display: inline;
+  float: left;
+  padding: 10px 20px;
 }
 
 ul {
@@ -60,17 +60,24 @@ ul {
   color: black;
   transition: 200ms;
   width: 150px;
-  z-index: 1;
+  position: absolute;
+  top: 50px;
   background-color: #92b4ec;
+  z-index: 1;
 }
 
 .menuLink {
   list-style-type: none;
 }
 
+.container {
+  position: absolute;
+  width: 100vw;
+  margin: 50px 0px;
+}
+
 #box1 {
   background-color: grey;
-  margin: 0;
 }
 
 #box2 {
@@ -81,5 +88,4 @@ ul {
 #box3 {
   background-color: slategray;
   color: black;
-  display: inline-block;
 }
