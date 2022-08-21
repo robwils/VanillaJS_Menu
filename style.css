@@ -2,6 +2,7 @@
   --blue: #92b4ec;
   --white: #ffffff;
   --gold: #ffd24c;
+  --navHeight: 46px;
 }
 
 a {
@@ -13,10 +14,6 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--gold);
-}
-
 HTML,
 body,
 h1,
@@ -24,6 +21,7 @@ h2 {
   margin: 0px;
   padding: 0px;
   border: 0px;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -35,7 +33,7 @@ body {
   background-color: var(--blue);
   width: 100vw;
   position: fixed;
-  height: 50px;
+  height: var(--navHeight);
   display: block;
 }
 
@@ -43,13 +41,27 @@ body {
   text-align: right;
   float: right;
   padding: 10px;
-  margin: 0;
+  margin: 0px;
+}
+.navBtn {
+  background-color: #ffd24c;
+  padding: 2px;
+  position: absolute;
+  border-radius: 50px;
+  display: inline;
+  margin: 7px;
 }
 
 #navIcon {
   cursor: pointer;
   float: left;
-  padding: 15px 10px;
+  padding: 5px 10px;
+}
+
+#navIcon.open {
+  cursor: pointer;
+  float: left;
+  padding: 10px 10px;
 }
 
 ul {
@@ -67,9 +79,12 @@ ul {
   transition: 200ms;
   width: 200px;
   position: absolute;
-  top: 50px;
+  top: 40px;
   background-color: #92b4ec;
   z-index: 1;
+  margin: 0;
+  padding: 5px;
+  border-bottom-right-radius: 30px;
 }
 
 .menuLink {
@@ -78,13 +93,25 @@ ul {
 }
 
 .menuLink:hover {
-  font-size: large;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.menuLinkIcon {
+  margin-left: 5px;
+  display: none;
+}
+
+.menuLinkIcon.open {
+  margin-left: 5px;
+  display: inline;
 }
 
 .container {
   position: absolute;
   width: 100vw;
-  margin: 50px 0px;
+  margin: 0px 0px;
+  top: var(--navHeight);
 }
 
 #box1 {
@@ -92,11 +119,13 @@ ul {
 }
 
 #box2 {
+  height: 30px;
   background-color: beige;
   color: black;
 }
 
 #box3 {
+  height: 30px;
   background-color: slategray;
   color: black;
 }

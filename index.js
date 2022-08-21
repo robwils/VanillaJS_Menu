@@ -1,40 +1,45 @@
 // Import stylesheets
 import './style.css';
 
-// Write Javascript code!
-const appDiv = document.getElementById('box1');
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
-
-// my code
-
 console.log('connected');
+
+// note - fix nav bar bug
 
 const navIcon = document.getElementById('navIcon');
 const navMenu = document.querySelector('.menuContainer');
 const navLinks = document.querySelectorAll('.menuLink');
+const navBtn = document.querySelector('.navBtn');
+const menuIcon = document.querySelector('.menuLinkIcon');
 
-navIcon.addEventListener('mouseover', openMenu);
+navIcon.addEventListener('mouseenter', openMenu);
 navMenu.addEventListener('mouseleave', closeMenu);
-
-console.log(navLinks);
+navBtn.addEventListener('mouseenter', closeMenu);
 
 navLinks.forEach((navLink) => {
-  navLink.addEventListener('mouseenter', linkHover);
+  navLink.addEventListener('mouseenter', linkHoverOn);
 });
 
 function openMenu() {
   console.log('clicked');
-  navMenu.classList.toggle(`open`);
+  navMenu.classList.add(`open`);
   console.log(navMenu.classList);
+  navIcon.classList.remove(`fas`);
+  navIcon.classList.remove(`fa-bars`);
+  navIcon.classList.add(`fa-solid`);
+  navIcon.classList.add(`fa-arrow-down`);
   navIcon.style.color = 'white';
 }
 
 function closeMenu() {
   navMenu.classList.remove(`open`);
-  console.log('clicked');
+  console.log('closed');
+  navIcon.classList.remove(`fa-solid`);
+  navIcon.classList.remove(`fa-arrow-down`);
+  navIcon.classList.add(`fas`);
+  navIcon.classList.add(`fa-bars`);
   navIcon.style.color = 'black';
 }
 
-function linkHover() {
-  console.log('hovered link');
+function linkHoverOn() {
+  menuIcon.classList.add('open');
 }
