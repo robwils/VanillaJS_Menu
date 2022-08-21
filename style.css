@@ -1,0 +1,86 @@
+:root {
+  --blue: #92b4ec;
+  --white: #ffffff;
+  --gold: #ffd24c;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+HTML,
+body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  background-color: var(--white);
+}
+
+h1,
+h2 {
+  margin: inherit;
+}
+
+/* nav bar */
+#myNav {
+  background-color: var(--blue);
+  width: 100vw;
+  position: fixed;
+}
+
+#navHeader {
+  text-align: right;
+  color: var(--gold);
+  display: inline;
+}
+
+#navIcon {
+  cursor: pointer;
+  display: inline;
+}
+
+ul {
+  margin: 0;
+}
+
+.menuContainer {
+  display: none;
+}
+
+.menuContainer.open {
+  display: block;
+  color: black;
+  transition: 200ms;
+  width: 150px;
+  z-index: 1;
+  background-color: #92b4ec;
+}
+
+.menuLink {
+  list-style-type: none;
+}
+
+#box1 {
+  background-color: grey;
+  margin: 0;
+}
+
+#box2 {
+  background-color: beige;
+  color: black;
+}
+
+#box3 {
+  background-color: slategray;
+  color: black;
+  display: inline-block;
+}
