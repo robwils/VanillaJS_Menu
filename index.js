@@ -16,6 +16,8 @@ const navLinks = document.querySelectorAll('.menuLink');
 navIcon.addEventListener('mouseover', openMenu);
 navMenu.addEventListener('mouseleave', closeMenu);
 
+console.log(navLinks);
+
 navLinks.forEach((navLink) => {
   navLink.addEventListener('mouseenter', linkHover);
 });
