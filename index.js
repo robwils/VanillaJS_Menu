@@ -9,14 +9,17 @@ const navIcon = document.getElementById('navIcon');
 const navMenu = document.querySelector('.menuContainer');
 const navLinks = document.querySelectorAll('.menuLink');
 const navBtn = document.querySelector('.navBtn');
-const menuIcon = document.querySelector('.menuLinkIcon');
+const menuIcons = document.querySelectorAll('.menuLinkIcon');
 
 navIcon.addEventListener('mouseenter', openMenu);
 navMenu.addEventListener('mouseleave', closeMenu);
 navBtn.addEventListener('mouseenter', closeMenu);
 
 navLinks.forEach((navLink) => {
-  navLink.addEventListener('mouseenter', linkHoverOn);
+  navLink.addEventListener('mouseenter', (e) => {
+    menuIcons.classList.add('open');
+    console.log('hovered');
+  });
 });
 
 function openMenu() {
@@ -40,6 +43,8 @@ function closeMenu() {
   navIcon.style.color = 'black';
 }
 
-function linkHoverOn() {
-  menuIcon.classList.add('open');
+function linkHoverOn(e) {
+  console.log('cleared');
 }
+
+console.log(navLinks);
