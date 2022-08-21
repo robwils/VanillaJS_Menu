@@ -96,6 +96,10 @@ ul {
   font-size: 17px;
   font-weight: bold;
 }
+.menuLink.open:hover {
+  font-size: 17px;
+  font-weight: bold;
+}
 
 .menuLinkIcon {
   margin-left: 5px;

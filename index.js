@@ -17,8 +17,9 @@ navBtn.addEventListener('mouseenter', closeMenu);
 
 navLinks.forEach((navLink) => {
   navLink.addEventListener('mouseenter', (e) => {
-    menuIcons.classList.add('open');
+    // navLink.classList.add('open');
     console.log('hovered');
+    console.log(navLink.children);
   });
 });
 
