@@ -3,8 +3,6 @@ import './style.css';
 
 console.log('connected');
 
-// note - fix nav bar bug
-
 const navIcon = document.getElementById('navIcon');
 const navMenu = document.querySelector('.menuContainer');
 const navLinks = document.querySelectorAll('.menuLink');
@@ -16,10 +14,17 @@ navMenu.addEventListener('mouseleave', closeMenu);
 navBtn.addEventListener('mouseenter', closeMenu);
 
 navLinks.forEach((navLink) => {
-  navLink.addEventListener('mouseenter', (e) => {
-    // navLink.classList.add('open');
+  navLink.addEventListener('mouseenter', () => {
+    clearAll(navLink);
+    navLink.childNodes[3].classList.add('open');
     console.log('hovered');
-    console.log(navLink.children);
+    console.log(navLink.childNodes);
+  });
+});
+
+navLinks.forEach((navLink) => {
+  navLink.addEventListener('mouseleave', () => {
+    clearAll(navLink);
   });
 });
 
@@ -44,8 +49,6 @@ function closeMenu() {
   navIcon.style.color = 'black';
 }
 
-function linkHoverOn(e) {
-  console.log('cleared');
+function clearAll(navLink) {
+  navLink.childNodes[3].classList.remove('open');
 }
-
-console.log(navLinks);
