@@ -123,13 +123,20 @@ ul {
 }
 
 #box2 {
-  height: 30px;
   background-color: beige;
   color: black;
 }
 
 #box3 {
-  height: 30px;
   background-color: slategray;
   color: black;
+}
+
+.contentPara {
+  padding: 20px 90px;
+  margin: 0;
+}
+
+.formContainer {
+  padding: 20px;
 }
